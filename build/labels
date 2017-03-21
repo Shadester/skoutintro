@@ -1,0 +1,7 @@
+irq	= $c035	; ?
+clear	= $c046
+sid_play	= $1006
+address_music	= $1000
+sid_init	= $1000	; ?
+init_screen	= $c03e	; ?
+play_music	= $c066	; ?

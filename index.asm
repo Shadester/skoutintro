@@ -32,6 +32,18 @@
 
 !source "code/main.asm"
 
+; subroutines
+!source "code/init_clear_screen.asm"
+
+; address maps
+!source "code/setup_symbols.asm"
+
+; Music subroutine
+!source "code/sub_music.asm"
+
+; Only music
+!source "code/load_resources.asm"
+
 ;============================================================
 ;  add additional source files as required
 ;============================================================
