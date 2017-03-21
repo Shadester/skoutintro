@@ -1,13 +1,11 @@
 ;============================================================
 ;    some initialization and interrupt redirect setup
 ;============================================================
-           jsr init_sprite     ; setup sprite
 
-           sei         ; set interrupt disable flag
+main       sei         ; set interrupt disable flag
             
            jsr init_screen     ; clear the screen
            jsr init_text       ; write lines of text
-           ;jsr init_sprite     ; setup sprite
            lda #$01
            jsr sid_init     ; init music routine now
 
@@ -42,8 +40,6 @@
 
 irq        dec $d019        ; acknowledge IRQ / clear register for next interrupt
 
-           ;jsr colwash      ; jump to color cycling routine
            jsr play_music         ; jump to play music routine
 
-
-           jmp $ea81        ; return to kernel interrupt routine
+           jmp $ea31      ; return to Kernel routine
