@@ -1,11 +1,13 @@
 ;============================================================
 ;    some initialization and interrupt redirect setup
 ;============================================================
+           jsr init_sprite     ; setup sprite
 
            sei         ; set interrupt disable flag
             
            jsr init_screen     ; clear the screen
            jsr init_text       ; write lines of text
+           ;jsr init_sprite     ; setup sprite
            lda #$01
            jsr sid_init     ; init music routine now
 

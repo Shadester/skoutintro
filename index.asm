@@ -38,9 +38,6 @@
 ; address maps
 !source "code/setup_symbols.asm"
 
-; print text
-!source "code/init_static_text.asm"
-
 ; Music subroutine
 !source "code/sub_music.asm"
 
@@ -49,6 +46,16 @@
 
 ; Text
 !source "code/straight_text.asm"
+
+; Sprite painting
+!source "code/init_sprite.asm"
+
+; skout sprite
+!source "resources/skout_sprite.asm"
+
+; print text
+!source "resources/init_static_text.asm"
+
 ;============================================================
 ;  add additional source files as required
 ;============================================================
