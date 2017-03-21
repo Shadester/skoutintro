@@ -5,7 +5,7 @@
            sei         ; set interrupt disable flag
             
            jsr init_screen     ; clear the screen
-           ;jsr init_text       ; write lines of text
+           jsr init_text       ; write lines of text
            lda #$01
            jsr sid_init     ; init music routine now
 

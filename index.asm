@@ -38,12 +38,17 @@
 ; address maps
 !source "code/setup_symbols.asm"
 
+; print text
+!source "code/init_static_text.asm"
+
 ; Music subroutine
 !source "code/sub_music.asm"
 
 ; Only music
 !source "code/load_resources.asm"
 
+; Text
+!source "code/straight_text.asm"
 ;============================================================
 ;  add additional source files as required
 ;============================================================

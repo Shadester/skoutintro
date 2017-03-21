@@ -1,7 +1,11 @@
-irq	= $c037	; ?
-clear	= $c048
+irq	= $c03a	; ?
+clear	= $c04b
 sid_play	= $1012
 address_music	= $1000
+init_text	= $c06b	; ?
 sid_init	= $1f80	; ?
-init_screen	= $c040	; ?
-play_music	= $c068	; ?
+loop_text	= $c06d
+line2	= $1fc8	; ?
+line1	= $1fa0	; ?
+init_screen	= $c043	; ?
+play_music	= $c07f	; ?
