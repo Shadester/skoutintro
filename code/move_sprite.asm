@@ -5,22 +5,22 @@ move_sprite			;lda delay_animation_pointer
 
 					+sine_table counter1_x
 					clc
-					adc	#$20
+					adc	#skout_x_pos
 					sta $d000
 
 					+sine_table counter1_y
 					clc
-					adc #$3f
+					adc #skout_y_pos
 					sta $d001
 
 					+sine_table counter2_x
 					clc
-					adc	#$9f
+					adc	#meetme_x_pos
 					sta $d002
 
 					+sine_table counter2_y
 					clc
-					adc #$3f
+					adc #meetme_y_pos
 					sta $d003
 
 delay_animation		rts

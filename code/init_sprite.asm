@@ -10,6 +10,11 @@ delay_animation_pointer     = $fc
 skout_special_color	= $06
 meetme_special_color = $04
 
+skout_x_pos = $20
+skout_y_pos = $3f
+meetme_x_pos = $0f
+meetme_y_pos = $3f
+
 spritepointerskout			= skoutspr / $40
 spritepointermeetme			= meetmespr / $40
 
@@ -43,16 +48,7 @@ lda #meetme_special_color	 ; individual Sprite#1 color
 sta $d028
 
 
-;lda #$01     ; set X-Coord high bit (9th Bit) for Sprite#0
-;sta $d010
+lda #%00000010     ; set X-Coord high bit (9th Bit) for Sprite#1
+sta $d010
 
-lda #$20 	; set Sprite#0 positions with X/Y coords to
-sta $d000   ; lower right of the screen
-lda #$3f    ; $d000 corresponds to X-Coord (0-504 incl 9th Bit on PAL systems)
-sta $d001   ; $d001 corresponds to Y-Coord (0-255 on PAL systems)
-
-lda #$9f 	; set Sprite#0 positions with X/Y coords to
-sta $d002   ; lower right of the screen
-lda #$3f    ; $d000 corresponds to X-Coord (0-504 incl 9th Bit on PAL systems)
-sta $d003   ; $d001 corresponds to Y-Coord (0-255 on PAL systems)
 					
