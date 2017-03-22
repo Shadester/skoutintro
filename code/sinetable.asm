@@ -1,54 +1,16 @@
-sine_table1_x	ldx counter1_x
-        		cpx #100
-        		bne nextstop1_x
-
-        		ldx #00
-        		stx counter1_x
-
-nextstop1_x      lda sprite_sinus,x
-
-        		inc counter1_x
-
-        		rts
-
-sine_table1_y	ldx counter1_y
-        		cpx #100
-        		bne nextstop1_y
-
-        		ldx #00
-        		stx counter1_y
-
-nextstop1_y     lda sprite_sinus,x
-
-        		inc counter1_y
-
-        		rts
-
-sine_table2_x   ldx counter2_x
+!macro          sine_table .counter {
+                ldx .counter
                 cpx #100
-                bne nextstop2_x
+                bne .nextstop
 
                 ldx #00
-                stx counter2_x
+                stx .counter
 
-nextstop2_x     lda sprite_sinus,x
+.nextstop        lda sprite_sinus,x
 
-                inc counter2_x
+                inc .counter
 
-                rts
-
-sine_table2_y   ldx counter2_y
-                cpx #100
-                bne nextstop2_y
-
-                ldx #00
-                stx counter2_y
-
-nextstop2_y      lda sprite_sinus,x
-
-                inc counter2_y
-
-                rts
+            }
 
 sprite_sinus   
     !byte 25,23,21,20,18,17,15,14,12,11,10,8,7,6,5,4
