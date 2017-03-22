@@ -7,9 +7,13 @@ main       sei         ; set interrupt disable flag
            lda #$00                    ; load our delay animation byte with #$00
            sta delay_animation_pointer ; we EOR against #$01 to flip between colors later
            lda #0
-           sta counter_x                 ; Reset counter
+           sta counter1_x                 ; Reset counter
            lda #25
-           sta counter_y
+           sta counter1_y
+           lda #75
+           sta counter2_x                 ; Reset counter
+           lda #60
+           sta counter2_y
 
             
            jsr init_screen     ; clear the screen

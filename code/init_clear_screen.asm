@@ -12,7 +12,7 @@ clear            lda #$20     ; #$20 is the spacebar Screen Code
                  sta $0500,x 
                  sta $0600,x 
                  sta $06e8,x 
-                 lda #$04     ; set foreground to black in Color Ram 
+                 lda #$0c     ; set foreground to black in Color Ram 
                  sta $d800,x  
                  sta $d900,x
                  sta $da00,x

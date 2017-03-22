@@ -1,2 +1,2 @@
-line1            !scr "           eriks skoutintro             "
+line1            !scr "        eriks meetmeskoutintro          "
 line2            !scr "       hackathon 2017 - too late        " 

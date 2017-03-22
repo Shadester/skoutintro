@@ -10,24 +10,22 @@ delay_animation_pointer     = $fc
 skout_special_color	= $06
 meetme_special_color = $04
 
-spritepointer			= skoutspr / $40
+spritepointerskout			= skoutspr / $40
+spritepointermeetme			= meetmespr / $40
 
-lda #spritepointer
+lda #spritepointerskout
 sta screen_ram + $3f8
 
-lda #$03     ; enable Sprite#0
+lda #spritepointermeetme
+sta screen_ram + $3f9
+
+lda #%00000011     ; enable Sprite#0+1
 sta $d015 
 
-lda #$01     ; set multicolor mode for Sprite#0
+lda #%00000011     ; set multicolor mode for Sprite#0+1
 sta $d01c
 
 lda #$00     ; Sprite#0 has priority over background
-sta $d01b
-
-lda #$01     ; set multicolor mode for Sprite#1
-sta $d01c
-
-lda #$00     ; Sprite#1 has priority over background
 sta $d01b
 
 lda #sprite_background_color ; shared background color
@@ -41,7 +39,7 @@ sta $d026
 
 lda #skout_special_color 	 ; individual Sprite#0 color
 sta $d027
-lda #meetme_special_color
+lda #meetme_special_color	 ; individual Sprite#1 color
 sta $d028
 
 
@@ -52,4 +50,9 @@ lda #$20 	; set Sprite#0 positions with X/Y coords to
 sta $d000   ; lower right of the screen
 lda #$3f    ; $d000 corresponds to X-Coord (0-504 incl 9th Bit on PAL systems)
 sta $d001   ; $d001 corresponds to Y-Coord (0-255 on PAL systems)
+
+lda #$9f 	; set Sprite#0 positions with X/Y coords to
+sta $d002   ; lower right of the screen
+lda #$3f    ; $d000 corresponds to X-Coord (0-504 incl 9th Bit on PAL systems)
+sta $d003   ; $d001 corresponds to Y-Coord (0-255 on PAL systems)
 					
