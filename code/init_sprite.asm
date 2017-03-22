@@ -38,8 +38,8 @@ sta $d027
 ;lda #$01     ; set X-Coord high bit (9th Bit) for Sprite#0
 ;sta $d010
 
-lda #$0f 	; set Sprite#0 positions with X/Y coords to
+lda #$20 	; set Sprite#0 positions with X/Y coords to
 sta $d000   ; lower right of the screen
-lda #$6f    ; $d000 corresponds to X-Coord (0-504 incl 9th Bit on PAL systems)
+lda #$3f    ; $d000 corresponds to X-Coord (0-504 incl 9th Bit on PAL systems)
 sta $d001   ; $d001 corresponds to Y-Coord (0-255 on PAL systems)
 					

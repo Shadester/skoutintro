@@ -3,4 +3,5 @@ sid_init		= $1f80 ; init routine for music
 sid_play		= $1012 ; play music routine
 
 screen_ram		= $0400 ; location of screen ram
-counter			= $fb ; counter address
+counter_x		= $fb ; counter horizontal
+counter_y		= $fd ; counter vertical

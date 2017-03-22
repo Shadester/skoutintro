@@ -1,13 +1,26 @@
-sinetable		ldx counter
+sine_table_x	ldx counter_x
         		cpx #100
-        		jmp nextstop
+        		bne nextstop_x
 
         		ldx #00
-        		stx counter
+        		stx counter_x
 
-nextstop       	lda sprite_sinus,x
+nextstop_x      lda sprite_sinus,x
 
-        		inc counter
+        		inc counter_x
+
+        		rts
+
+sine_table_y	ldx counter_y
+        		cpx #100
+        		bne nextstop_y
+
+        		ldx #00
+        		stx counter_y
+
+nextstop_y      lda sprite_sinus,x
+
+        		inc counter_y
 
         		rts
 
