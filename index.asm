@@ -1,12 +1,4 @@
 ;============================================================
-; Empty Assembler project with Basic Loader
-; Code by actraiser/Dustlayer
-;
-; http://www.dustlayer.com
-; 
-;============================================================
-
-;============================================================
 ; index file which loads all source code and resources files
 ;============================================================
 
@@ -15,7 +7,7 @@
 ;============================================================
 
 !cpu 6502
-!to "build/empty.prg",cbm    ; output file
+!to "build/skoutro.prg",cbm    ; output file
 
 ; skout sprite
 !source "resources/skout_sprite.asm"
