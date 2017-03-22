@@ -41,6 +41,7 @@
 ; Sine table
 !source "code/sinetable.asm"
 
+; Sprite movement
 !source "code/move_sprite.asm"
 
 ; Music subroutine
@@ -50,10 +51,10 @@
 !source "code/load_resources.asm"
 
 ; print text
-!source "resources/init_static_text.asm"
+!source "code/init_static_text.asm"
 
 ; Text
-!source "code/straight_text.asm"
+!source "resources/straight_text.asm"
 
 
 
