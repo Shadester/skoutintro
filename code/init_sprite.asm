@@ -7,20 +7,27 @@ delay_animation_pointer     = $fc
 ; individual sprite color for Sprite#0. This is also stored in Byte 64
 ; of each Sprite (low nibble) when we use SpritePad. We did not bother
 ; to parse this information in this case either.
-sprite_special_color	= $06
+skout_special_color	= $06
+meetme_special_color = $04
 
 spritepointer			= skoutspr / $40
 
 lda #spritepointer
 sta screen_ram + $3f8
 
-lda #$01     ; enable Sprite#0
+lda #$03     ; enable Sprite#0
 sta $d015 
 
 lda #$01     ; set multicolor mode for Sprite#0
 sta $d01c
 
 lda #$00     ; Sprite#0 has priority over background
+sta $d01b
+
+lda #$01     ; set multicolor mode for Sprite#1
+sta $d01c
+
+lda #$00     ; Sprite#1 has priority over background
 sta $d01b
 
 lda #sprite_background_color ; shared background color
@@ -32,8 +39,11 @@ sta $d025
 lda #sprite_multicolor_2 	 ; shared multicolor 2
 sta $d026
 
-lda #sprite_special_color 	 ; individual Sprite#0 color
+lda #skout_special_color 	 ; individual Sprite#0 color
 sta $d027
+lda #meetme_special_color
+sta $d028
+
 
 ;lda #$01     ; set X-Coord high bit (9th Bit) for Sprite#0
 ;sta $d010
