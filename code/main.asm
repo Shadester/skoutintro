@@ -3,6 +3,9 @@
 ;============================================================
 
 main       sei         ; set interrupt disable flag
+
+           lda #$00                    ; load our delay animation byte with #$00
+           sta delay_animation_pointer ; we EOR against #$01 to flip between colors later
             
            jsr init_screen     ; clear the screen
            jsr init_text       ; write lines of text
@@ -41,5 +44,6 @@ main       sei         ; set interrupt disable flag
 irq        dec $d019        ; acknowledge IRQ / clear register for next interrupt
 
            jsr play_music         ; jump to play music routine
+           jsr move_sprite        ; jump to move sprite routine
 
            jmp $ea31      ; return to Kernel routine

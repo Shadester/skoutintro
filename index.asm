@@ -46,6 +46,8 @@
 ; subroutines
 !source "code/init_clear_screen.asm"
 
+!source "code/move_sprite.asm"
+
 ; Music subroutine
 !source "code/sub_music.asm"
 
@@ -57,6 +59,9 @@
 
 ; Text
 !source "code/straight_text.asm"
+
+; Sine table
+!source "code/sinetable.asm"
 
 
 

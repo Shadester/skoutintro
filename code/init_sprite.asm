@@ -2,6 +2,8 @@ sprite_background_color = $00
 sprite_multicolor_1  	= $0e
 sprite_multicolor_2  	= $01
 
+delay_animation_pointer     = $fc
+
 ; individual sprite color for Sprite#0. This is also stored in Byte 64
 ; of each Sprite (low nibble) when we use SpritePad. We did not bother
 ; to parse this information in this case either.
@@ -33,8 +35,8 @@ sta $d026
 lda #sprite_special_color 	 ; individual Sprite#0 color
 sta $d027
 
-lda #$01     ; set X-Coord high bit (9th Bit) for Sprite#0
-sta $d010
+;lda #$01     ; set X-Coord high bit (9th Bit) for Sprite#0
+;sta $d010
 
 lda #$0f 	; set Sprite#0 positions with X/Y coords to
 sta $d000   ; lower right of the screen
