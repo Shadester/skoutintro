@@ -12,7 +12,7 @@ meetme_special_color = $04
 
 skout_x_pos = $20
 skout_y_pos = $3f
-meetme_x_pos = $0f
+meetme_x_pos = $ce
 meetme_y_pos = $3f
 
 spritepointerskout			= skoutspr / $40
@@ -29,6 +29,15 @@ sta $d015
 
 lda #%00000011     ; set multicolor mode for Sprite#0+1
 sta $d01c
+
+;lda #%00000010     ; set X-Coord high bit (9th Bit) for Sprite#1
+;sta $d010
+
+lda #%00000011	   ; set double width
+sta $d01d
+
+lda #%00000011     ; set double height
+sta $d017
 
 lda #$00     ; Sprite#0 has priority over background
 sta $d01b
@@ -48,7 +57,5 @@ lda #meetme_special_color	 ; individual Sprite#1 color
 sta $d028
 
 
-lda #%00000010     ; set X-Coord high bit (9th Bit) for Sprite#1
-sta $d010
 
 					
