@@ -14,6 +14,10 @@ main       sei         ; set interrupt disable flag
            sta counter2_x                 ; Reset counter
            lda #60
            sta counter2_y
+           lda #63
+           sta counter3_x
+           lda #87
+           sta counter3_y
 
             
            jsr init_screen     ; clear the screen
