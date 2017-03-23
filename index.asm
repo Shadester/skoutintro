@@ -56,10 +56,6 @@
 ; Text
 !source "resources/straight_text.asm"
 
-
-
-
-
 ;============================================================
 ;  add additional source files as required
 ;============================================================

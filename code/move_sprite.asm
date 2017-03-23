@@ -23,4 +23,22 @@ move_sprite			;lda delay_animation_pointer
 					adc #meetme_y_pos
 					sta $d003
 
+					+sine_table counter3_x
+					clc
+					sta tempvalue
+					adc #ifweleft_x_pos
+					sta $d004
+					lda tempvalue
+					adc #ifweright_x_pos
+					sta $d006
+
+					+sine_table counter3_y
+					clc
+					sta tempvalue
+					adc #ifweleft_y_pos
+					sta $d005
+					lda tempvalue
+					adc #ifweright_y_pos
+					sta $d007
+
 delay_animation		rts
