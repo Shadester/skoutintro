@@ -1,2 +1,2 @@
-line1            !scr "        eriks meetmeskoutintro          "
-line2            !scr "       hackathon 2017 - too late        " 
+line1            !scr "        we welcome if(we) to the        "
+line2            !scr "         meetme / skout family!         " 
