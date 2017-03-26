@@ -1,7 +1,11 @@
-move_sprite			;lda delay_animation_pointer
-					;eor #$01
-					;sta delay_animation_pointer
-					;beq delay_animation
+move_sprite			inc delay_animation_pointer
+        			lda delay_animation_pointer                  ;If already executing, skip the update
+        			cmp #$03                        ;code
+        			bcs continue
+        			rts
+
+        continue	lda #$0
+        			sta delay_animation_pointer
 
 					+sine_table counter1_x
 					clc
@@ -41,4 +45,4 @@ move_sprite			;lda delay_animation_pointer
 					adc #ifweright_y_pos
 					sta $d007
 
-delay_animation		rts
+					rts
