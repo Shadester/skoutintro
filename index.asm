@@ -11,6 +11,7 @@
 
 ; skout sprite
 !source "resources/skout_sprite.asm"
+!source "resources/data_colorwash.asm"
 
 ;============================================================
 ; BASIC loader with start address $c000
@@ -46,6 +47,9 @@
 
 ; Music subroutine
 !source "code/sub_music.asm"
+
+; Colorwash routine
+!source "code/sub_colorwash.asm"
 
 ; Only music
 !source "code/load_resources.asm"

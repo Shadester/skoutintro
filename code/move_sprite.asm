@@ -1,6 +1,6 @@
 move_sprite			inc delay_animation_pointer
         			lda delay_animation_pointer                  ;If already executing, skip the update
-        			cmp #$03                        ;code
+        			cmp #$02                        ;code
         			bcs continue
         			rts
 

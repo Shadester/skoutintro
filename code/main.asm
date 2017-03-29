@@ -58,5 +58,6 @@ irq        dec $d019        ; acknowledge IRQ / clear register for next interrup
 
            jsr play_music         ; jump to play music routine
            jsr move_sprite        ; jump to move sprite routine
+           jsr colwash            ; jump to colorwash routine
 
            jmp $ea31      ; return to Kernel routine
