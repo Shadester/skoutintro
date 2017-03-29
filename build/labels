@@ -1,4 +1,4 @@
-color	= $30ed
+color	= $2004	; ?
 spritepointerifweright	= $c3
 spritepointermeetme	= $c1
 irq	= $c0aa	; ?
@@ -33,7 +33,7 @@ ifweleft_x_pos	= $7b
 spritepointerifweleft	= $c2
 counter1_y	= $4001
 counter1_x	= $4000
-color2	= $3115
+color2	= $202c	; ?
 meetme_special_color	= $4
 screen_ram	= $400
 spritepointerskout	= $c0

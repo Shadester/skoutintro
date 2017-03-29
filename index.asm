@@ -11,7 +11,6 @@
 
 ; skout sprite
 !source "resources/skout_sprite.asm"
-!source "resources/data_colorwash.asm"
 
 ;============================================================
 ; BASIC loader with start address $c000
@@ -59,6 +58,7 @@
 
 ; Text
 !source "resources/straight_text.asm"
+!source "resources/data_colorwash.asm"
 
 ;============================================================
 ;  add additional source files as required
