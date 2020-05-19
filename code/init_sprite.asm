@@ -1,18 +1,18 @@
 sprite_background_color = $00
-sprite_multicolor_1  	= $0e
-sprite_multicolor_2  	= $01
+sprite_multicolor_1  	= $0c
+sprite_multicolor_2  	= $06
 
 delay_animation_pointer     = $fc
 
 ; individual sprite color for Sprite#0. This is also stored in Byte 64
 ; of each Sprite (low nibble) when we use SpritePad. We did not bother
 ; to parse this information in this case either.
-skout_special_color	= $06
+kt_special_color	= $01
 meetme_special_color = $04
 ifwe_special_color = $01
 
-skout_x_pos = $20
-skout_y_pos = $3f
+kt_x_pos = $20
+kt_y_pos = $3f
 meetme_x_pos = $ce
 meetme_y_pos = $3f
 ifweleft_x_pos = $7b
@@ -20,12 +20,12 @@ ifweleft_y_pos = $8b
 ifweright_x_pos = $93
 ifweright_y_pos = $8b
 
-spritepointerskout			 = skoutspr / $40
+spritepointerkt			 = skoutspr / $40
 spritepointermeetme			 = meetmespr / $40
 spritepointerifweleft        = ifweleftspr / $40
 spritepointerifweright       = ifwerightspr / $40
 
-lda #spritepointerskout
+lda #spritepointerkt
 sta screen_ram + $3f8
 
 lda #spritepointermeetme
@@ -64,7 +64,7 @@ sta $d025
 lda #sprite_multicolor_2 	 ; shared multicolor 2
 sta $d026
 
-lda #skout_special_color 	 ; individual Sprite#0 color
+lda #kt_special_color 	 ; individual Sprite#0 color
 sta $d027
 lda #meetme_special_color	 ; individual Sprite#1 color
 sta $d028

@@ -4,17 +4,17 @@ move_sprite			inc delay_animation_pointer
         			bcs continue
         			rts
 
-        continue	lda #$0
+continue			lda #$0
         			sta delay_animation_pointer
 
 					+sine_table counter1_x
 					clc
-					adc	#skout_x_pos
+					adc	#kt_x_pos
 					sta $d000
 
 					+sine_table counter1_y
 					clc
-					adc #skout_y_pos
+					adc #kt_y_pos
 					sta $d001
 
 					+sine_table counter2_x

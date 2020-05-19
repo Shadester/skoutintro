@@ -1,2 +1,2 @@
-line1            !scr "        we welcome if(we) to the        "
-line2            !scr "         meetme / skout family!         " 
+line1            !scr "        keeptruckin has the best        "
+line2            !scr "    solutions for your trucking needs   " 
